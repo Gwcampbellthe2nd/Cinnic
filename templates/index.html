@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinnic AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <div id="chat-container">
+        <header id="chat-header">
+            <h1>Cinnic.ai</h1>
+            <h2>Your AI Personal Assistant</h2>
+        </header>
+        <div id="messages-area">
+            
+            <div id="typing-indicator" class="message ai-message" style="display: none;">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+            <!-- Messages will be appended here -->
+        </div>
+        <div id="input-area">
+            <input type="text" id="message-input" placeholder="Type a message...">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
